@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "api-test-dev": "newman run tests/OwlH_Node_API_tests.postman_collection.json"
+    "api-test-dev": "newman run tests/OwlH_Node_API_tests.postman_collection.json  --insecure"
   },
   "author": "owlh.net",
   "dependencies": {
