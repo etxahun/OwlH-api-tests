@@ -28,10 +28,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://n01-visa:50002/node/zeek",
+					"raw": "https://devel:50002/node/zeek",
 					"protocol": "https",
 					"host": [
-						"n01-visa"
+						"devel"
 					],
 					"port": "50002",
 					"path": [
@@ -57,10 +57,6 @@
 							"    pm.expect(pm.response.text()).to.include(\"true\");",
 							"});",
 							"",
-							"pm.test(\"path\", function () {",
-							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.value).to.eql(100);",
-							"});",
 							"",
 							""
 						],
@@ -72,10 +68,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://n01-visa:50002/node/suricata",
+					"raw": "https://devel:50002/node/suricata",
 					"protocol": "https",
 					"host": [
-						"n01-visa"
+						"devel"
 					],
 					"port": "50002",
 					"path": [
