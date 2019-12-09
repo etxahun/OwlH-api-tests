@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "33408bcb-a1b1-4e34-9953-1cbcb419a7bb",
+		"name": "OwlH_Node_API_tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "zeek status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "11f18279-fca5-44d0-8d2d-72e72098b93f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"standalone\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://n01-visa:50002/node/zeek",
+					"protocol": "https",
+					"host": [
+						"n01-visa"
+					],
+					"port": "50002",
+					"path": [
+						"node",
+						"zeek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sruicata",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "62f5c913-7759-42cc-8463-f8a0bb42d8f5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"true\");",
+							"});",
+							"",
+							"pm.test(\"path\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.value).to.eql(100);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://n01-visa:50002/node/suricata",
+					"protocol": "https",
+					"host": [
+						"n01-visa"
+					],
+					"port": "50002",
+					"path": [
+						"node",
+						"suricata"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

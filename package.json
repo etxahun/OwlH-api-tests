@@ -1,0 +1,15 @@
+{
+  "name": "owlh-api-tests",
+  "version": "1.0.0",
+  "description": "tests for api",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "api-test-dev": "newman run tests/OwlH_Node_API_tests.postman_collection.json"
+  },
+  "author": "owlh.net",
+  "dependencies": {
+    "newman": "^4.5.7"
+  }
+}
