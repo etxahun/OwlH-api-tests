@@ -43,7 +43,7 @@
 			"response": []
 		},
 		{
-			"name": "Sruicata",
+			"name": "Suricata",
 			"event": [
 				{
 					"listen": "test",
